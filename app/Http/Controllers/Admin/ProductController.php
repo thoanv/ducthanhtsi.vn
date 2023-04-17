@@ -120,7 +120,6 @@ class ProductController extends Controller
         $origins = $this->originRepo->getByStatus();
         $trademarks = $this->trademarkRepo->getByStatus();
         $categories = $this->getCategories();
-        dd($categories);
         return view($this->view.'.update',[
             'product'       => $product,
             'origins'       => $origins,
