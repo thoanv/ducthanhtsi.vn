@@ -100,16 +100,18 @@
                                 <link itemprop="availability" href="http://schema.org/InStock">
                             </div>
                         </div>
+                        @if($product->trademark)
                         <div class="dtp_status cf"><b><span class="left_title">Thương hiệu:</span> <a
-                                        href="https://www.ketnoitieudung.vn/thuong-hieu/toptul.html" class="cl_blue">TOPTUL</a></b>
+                                        href="https://www.ketnoitieudung.vn/thuong-hieu/toptul.html" class="cl_blue">{{$product->trademark->name}}</a></b>
                         </div>
+                        @endif
                         @if($product['SKU'])
                             <div class="dtp_status cf"><b><span class="left_title">SKU:</span> <span
                                             class="cl_green">{{$product['SKU']}}</span></b>
                             </div>
                         @endif
-                        <div class="dtp_status cf"><b><span class="left_title">Model:</span> <span class="cl_green">GCAI150R</span></b>
-                        </div>
+{{--                        <div class="dtp_status cf"><b><span class="left_title">Model:</span> <span class="cl_green">GCAI150R</span></b>--}}
+{{--                        </div>--}}
                         @if($product->origin)
                             <div class="dtp_status cf"><b><span class="left_title">Xuất xứ:</span> <span
                                             class="cl_green">{{$product->origin->name}}</span></b>

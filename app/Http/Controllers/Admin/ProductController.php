@@ -86,7 +86,9 @@ class ProductController extends Controller
         $data['status'] = isset($request['status']) ? 1 : 0;
         $data['price'] = str_replace(',', '', $request['price']);
         $data['employee_id'] = Auth::id();
-        $data['extends'] =  serialize($request['extends']);
+        if(isset($request['extends']))
+            $data['extends'] =  serialize($request['extends']);
+
         $result = $this->productRepo->create($data);
         $data = [];
         $data['slug'] = Str::slug($request->name.'-'.$result['id']);

@@ -40,8 +40,6 @@
                                     <th scope="col">STT</th>
                                     <th scope="col">Tên</th>
                                     <th scope="col">Hình ảnh</th>
-                                    <th scope="col" class="text-center">Danh mục</th>
-                                    <th scope="col" class="text-center">Nổi bật</th>
                                     <th scope="col" class="text-center">Trạng thái</th>
                                     <th scope="col" class="text-center">Hành động</th>
                                 </tr>
@@ -55,20 +53,6 @@
                                         </td>
                                         <td role="cell">
                                             <img class="image_" src="{{$item['avatar']}}" alt="{{$item['name']}}">
-                                        </td>
-                                        <td class="text-center">
-                                            @if($item->category && isset($item->category->name))
-                                            <div class="badge badge-outline-success badge-pill">{{$item->category->name}}</div>
-                                            @endif
-                                        </td>
-                                        <td role="cell" class="text-center">
-                                            <div class="form-check form-switch" style="display: inline-block">
-                                                <input name="my-checkbox" type="checkbox"
-                                                       class="form-check-input css-switch" data-id="{{$item['id']}}"
-                                                       data-api="{{route('enable-column')}}" data-table="trademarks"
-                                                       data-column="featured"
-                                                    {{ $item['featured'] ? 'checked="checked"' : '' }}>
-                                            </div>
                                         </td>
                                         <td role="cell" class="text-center">
                                             <div class="form-check form-switch" style="display: inline-block">

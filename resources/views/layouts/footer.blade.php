@@ -16,33 +16,43 @@
                             <img class="icons" src="/front-end/icons/telephone-call.png" alt="telephone">
                             <span>Hotline:<a href="tel:{{$info_web['phone']}}" class="hotline"> {{$info_web['phone']}}</a></span>
                         </p>
+                        @if($info_web['email'])
                         <p>
                             <img class="icons" src="/front-end/icons/email.png" alt="email">
                             <span><a href="mailto:{{$info_web['email']}}">{{$info_web['email']}}</a></span>
                         </p>
+                        @endif
                     </div>
                     <div class="network">
                         <ul>
+                            @if($info_web['facebook'])
                             <li>
-                                <a href="https://www.facebook.com/2StayVN" target="_blank" title="Facebook">
+                                <a href="{{$info_web['facebook']}}" target="_blank" title="Facebook">
                                     <img class="w-30" src="/front-end/icons/facebook.png" alt="facebook">
                                 </a>
                             </li>
+                            @endif
+                                @if($info_web['instagram'])
                             <li>
-                                <a href="https://www.youtube.com/" target="_blank" title="Youtube">
+                                <a href="{{$info_web['instagram']}}" target="_blank" title="Youtube">
                                     <img src="/front-end/icons/instagram.png" alt="instagram">
                                 </a>
                             </li>
+                                @endif
+                                @if($info_web['tiktok'])
                             <li>
-                                <a href="https://www.tiktok.com/@2stay_vn?is_from_webapp=1&amp;sender_device=pc" target="_blank" title="Tiktok">
+                                <a href="{{$info_web['tiktok']}}" target="_blank" title="Tiktok">
                                     <img src="/front-end/icons/tik-tok.png" alt="tiktok">
                                 </a>
                             </li>
+                            @endif
+                            @if($info_web['youtube'])
                             <li>
-                                <a href="https://twitter.com/?lang=vi" target="_blank" title="Twitter">
+                                <a href="{{$info_web['youtube']}}" target="_blank" title="Twitter">
                                     <img class="w-30" src="/front-end/icons/youtube.png" alt="youtube">
                                 </a>
                             </li>
+                            @endif
                         </ul>
                     </div>
                     <div class="clear-both"></div>

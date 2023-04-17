@@ -44,10 +44,8 @@ class TrademarkController extends Controller
     public function create(Trademark $trademark)
     {
         $this->authorize('create', $trademark);
-        $categories = $this->getCategories();
         return view($this->view.'.create',[
             'trademark' => $trademark,
-            'categories' => $categories,
             'view' => $this->view,
         ]);
     }
@@ -66,7 +64,7 @@ class TrademarkController extends Controller
      */
     public function store(StoreTrademarkRequest $request)
     {
-        $data = $request->only('name', 'avatar', 'category_id');
+        $data = $request->only('name', 'avatar');
         $data['status'] = isset($request['status']) ? 1 : 0;
         $data['slug'] = Str::slug($request->name);
         $this->trademarkRepo->create($data);

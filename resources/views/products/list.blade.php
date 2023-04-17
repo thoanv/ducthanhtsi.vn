@@ -153,7 +153,7 @@
                                     $query = \App\Models\Trademark::where('id', $trademark)->first();
                                     if(!$query) $query = new \App\Models\Trademark();
                                 @endphp
-                                <li><a href="{{route('thuong-hieu', ['category_slug' => $category['slug'], 'slug' => $query['slug']])}}" title="{{$query['name']}}">{{$query['name']}}</a></li>
+                                <li><a href="{{url("/thuong-hieu/".$cate['slug']."/".$query['slug'])}}">{{$query['name']}}</a></li>
                             @endforeach
 
                         </ul>

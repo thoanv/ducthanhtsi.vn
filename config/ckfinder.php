@@ -29,8 +29,8 @@ $config['authentication'] = '\App\Http\Middleware\CustomCKFinderAuth';
 /*============================ License Key ============================================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_licenseKey
 
-$config['licenseName'] = 'blog.2stay.vn';
-$config['licenseKey']  = 'J9T9HWGQG939RHS5YFHT7V5RFYFLC';
+$config['licenseName'] = 'ducthanhtsi.vn';
+$config['licenseKey']  = 'H6D6RXUMMT8KQNFVKR3XR8S12T2DJ';
 
 /*============================ CKFinder Internal Directory ============================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_privateDir
