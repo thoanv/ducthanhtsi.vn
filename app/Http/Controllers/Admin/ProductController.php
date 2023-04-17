@@ -116,6 +116,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
+        dd($product);
         $this->authorize('update', $product);
         $origins = $this->originRepo->getByStatus();
         $trademarks = $this->trademarkRepo->getByStatus();
