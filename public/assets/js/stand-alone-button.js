@@ -7,7 +7,7 @@
             var route_prefix = (options && options.prefix) ? options.prefix : '/filemanager';
             var target_input =  $(this).attr('data-name');
             var target_preview = $('#' + $(this).data('preview'));
-            var domain = window.location.protocol + '//' + window.location.host+'/';
+            var domain = window.location.protocol + '//' + window.location.host;
             console.log(domain)
             window.open(route_prefix + '?type=' + type, 'FileManager', 'width=900,height=600');
             window.SetUrl = function (items) {
