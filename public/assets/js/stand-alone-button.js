@@ -15,6 +15,7 @@
                     return item.url;
                 }).join(',');
                 var source = file_path.replace(domain, "/");
+                console.log(source)
                 // set the value of the desired input to image url
                 $('.'+target_input).val('').val(source).trigger('change');
 
