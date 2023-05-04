@@ -66,5 +66,19 @@
     });
     $('.select-multiple').select2();
 </script>
-@include('ckfinder::setup')
+
+{{--@include('ckfinder::setup')--}}
+<script src="{{asset('assets/js/stand-alone-button.js')}}"></script>
+<script>
+    var options = {
+        filebrowserImageBrowseUrl: '/admin/laravel-filemanager?type=Images',
+        filebrowserImageUploadUrl: '/admin/laravel-filemanager/upload?type=Images&_token=',
+        filebrowserBrowseUrl: '/admin/laravel-filemanager?type=Files',
+        filebrowserUploadUrl: '/admin/laravel-filemanager/upload?type=Files&_token='
+    };
+    CKEDITOR.replace('content' , options)
+    var route_prefix = "/admin/laravel-filemanager";
+    $('.upload_image').filemanager('image', {prefix: route_prefix});
+</script>
+
 @stack('scripts')
