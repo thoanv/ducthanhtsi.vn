@@ -14,7 +14,7 @@
                 var file_path = items.map(function (item) {
                     return item.url;
                 }).join(',');
-                var source = file_path.replace(domain, "");
+                var source = file_path.replace(domain, "/");
                 // set the value of the desired input to image url
                 $('.'+target_input).val('').val(source).trigger('change');
 
