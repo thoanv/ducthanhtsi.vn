@@ -116,12 +116,12 @@ class HomeController extends Controller
         $trademark = $this->trademarkRepo->getTrademarkBySlug($slug);
         if(!$trademark) return abort(404);
         $category = $this->categoryRepo->getCategoryBySlug($category_slug);
+        if(!$category) return abort(404);
         if($category['parent_id']){
             $categoryParent = $this->categoryRepo->find($category['parent_id']);
         }else{
             $categoryParent = $category;
         }
-        if(!$category) return abort(404);
         $categories = $this->categoryRepo->getAllCategories();
         $child_categories = $this->categoryRepo->getAllListChildCategoriesById($categoryParent['id']);
         $list_child_categories = $this->categoryRepo->getAllListChildCategoriesById($category['id']);
