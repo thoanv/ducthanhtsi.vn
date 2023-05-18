@@ -50,12 +50,12 @@ class HomeController extends Controller
     public function slug(Request $request,$category_slug, $slug = '')
     {
         $category = $this->categoryRepo->getCategoryBySlug($category_slug);
+        if(!$category) return abort(404);
         if($category['parent_id']){
             $categoryParent = $this->categoryRepo->find($category['parent_id']);
         }else{
             $categoryParent = $category;
         }
-        if(!$category) return abort(404);
         $categories = $this->categoryRepo->getAllCategories();
         $child_categories = $this->categoryRepo->getAllListChildCategoriesById($categoryParent['id']);
         $list_child_categories = $this->categoryRepo->getAllListChildCategoriesById($category['id']);
