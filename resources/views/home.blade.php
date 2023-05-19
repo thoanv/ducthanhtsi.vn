@@ -174,7 +174,7 @@
                                     <span class="saleoff">-{{$product['discount']}}%</span>
                                 @else
                                 <div class="info_price">
-                                    <span class="f_price"></span>
+{{--                                    <span class="f_price"></span>--}}
                                     <span class="m_price cl_red">{{$product->getPrice()}}</span>
                                 </div>
                             @endif
