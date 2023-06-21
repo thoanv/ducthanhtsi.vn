@@ -29,8 +29,10 @@ $config['authentication'] = '\App\Http\Middleware\CustomCKFinderAuth';
 /*============================ License Key ============================================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_licenseKey
 
-$config['licenseName'] = 'ducthanhtsi.vn';
-$config['licenseKey']  = 'H6D6RXUMMT8KQNFVKR3XR8S12T2DJ';
+$config['licenseName'] = 'https://ducthanhtsi.vn';
+$config['licenseKey']  = '3UPU6HKU6JNRX7UPQ2857VHDYYGRF';
+
+
 
 /*============================ CKFinder Internal Directory ============================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_privateDir
